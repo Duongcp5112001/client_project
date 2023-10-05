@@ -10,7 +10,8 @@
           "position: sticky"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   },
   "browserslist": [
     "defaults",
