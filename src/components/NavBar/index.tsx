@@ -1,10 +1,17 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import "./styles.css"
+import Logo from '../../assets/logo.png'
 
 const Navbar: React.FC = () => {
   return (
     <div className="navbar">
-      <h1>Navbar</h1>
+      <div className='navLogo'>
+        <a href="/"><img src={Logo} alt="Image"/></a>
+      </div>
+      <div className='navDropdown'>
+
+      </div>
     </div>
   );
 };

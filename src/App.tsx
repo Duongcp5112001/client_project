@@ -3,15 +3,13 @@ import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
-  Navigate,
 } from "react-router-dom";
 import SideBar from './components/SideBar'; 
 import NavBar from './components/NavBar';
 import DashBoard from './components/DashBoard/dashboard';
 import ListStudent from './components/ListStudent/listStudents';
 import ListTeacher from './components/ListTeacher/listTeachers';
-import Login from './context/Login/login';
-import "./styles/App.css"
+import Login from './components/Login/login';
 import Detail from './components/Details/detail';
 
 function App() { 
