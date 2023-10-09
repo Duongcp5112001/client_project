@@ -12,7 +12,7 @@ const Login = () => {
         margin: '0 auto',
       }} 
     > 
-      <h1>Login</h1> 
+      <h1>Login da sua?</h1> 
     </div> 
   ); 
 }; 
