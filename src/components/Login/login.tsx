@@ -16,4 +16,4 @@ const Login = () => {
   ); 
 }; 
   
-export default DashBoard;
+export default Login;
