@@ -1,28 +1,71 @@
 import React from 'react'; 
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 import SideBar from './components/SideBar'; 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import NavBar from './components/NavBar';
 import DashBoard from './components/DashBoard/dashboard';
 import ListStudent from './components/ListStudent/listStudents';
 import ListTeacher from './components/ListTeacher/listTeachers';
-import Login from './components/Login/login';
-
-import NavBar from './components/NavBar';
+import Login from './context/Login/login';
 import "./styles/App.css"
+import Detail from './components/Details/detail';
 
 function App() { 
+  const Layout = () => {
+    return (
+      <div>
+        <NavBar />
+        <div>
+          <SideBar />
+          <div>
+            <Outlet />
+          </div>
+        </div>
+      </div>
+    )
+  }
+  
+  const router = createBrowserRouter([
+    {
+      path: '/login',
+      element: <Login />,
+    },
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <DashBoard />
+        },
+        {
+          path: '/ListStudent',
+          element: <ListStudent />
+        },
+        {
+          path: '/ListTeacher',
+          element: <ListTeacher />
+        },
+        {
+          path: '/Details',
+          element: <Detail />
+        },
+      ]
+    }
+  ])
+  
   return ( 
-    <Router> 
-      <NavBar />
-      <SideBar />
-      <Routes> 
-        <Route path='/' Component={Login} /> 
-        <Route path='/DashBoard' Component={DashBoard} /> 
-        <Route path='/ListStudent' Component={ListStudent} /> 
-        <Route path='/ListTeacher' Component={ListTeacher} /> 
-      </Routes> 
-    </Router> 
-  ); 
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );  
 } 
 
 export default App;
+
+
+

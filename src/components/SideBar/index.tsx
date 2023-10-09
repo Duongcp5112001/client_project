@@ -12,7 +12,7 @@ const SideBar = () => {
       <Nav> 
         <Bars /> 
         <NavMenu> 
-          <NavLink to='/DashBoard'> 
+          <NavLink to='/'> 
             Dashboard 
           </NavLink> 
           <NavLink to='/ListStudent'> 
@@ -20,7 +20,10 @@ const SideBar = () => {
           </NavLink> 
           <NavLink to='/ListTeacher'> 
             List Teachers 
-          </NavLink>  
+          </NavLink> 
+          <NavLink to='/Details'> 
+            Detail 
+          </NavLink> 
         </NavMenu> 
       </Nav> 
     </> 
