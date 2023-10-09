@@ -5,6 +5,7 @@ import DashBoard from './pages/dashboard';
 import ListStudent from './pages/listStudents';
 import ListTeacher from './pages/listTeachers';
 import NavBar from './components/NavBar';
+import "./styles/App.css"
 
 function App() { 
   return ( 
