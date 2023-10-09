@@ -8,7 +8,7 @@ function NavDropdown() {
         Dropdown Button
       </Dropdown.Toggle>
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Detail informations</Dropdown.Item>
+        <Dropdown.Item href="">Detail informations</Dropdown.Item>
         <Dropdown.Item href="/login">Log Out</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

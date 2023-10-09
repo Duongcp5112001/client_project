@@ -15,14 +15,17 @@ const SideBar = () => {
           <NavLink to='/'> 
             Dashboard 
           </NavLink> 
-          <NavLink to='/ListStudent'> 
+          <NavLink to='/list-student'> 
             List Students 
           </NavLink> 
-          <NavLink to='/ListTeacher'> 
+          <NavLink to='/list-teacher'> 
             List Teachers 
           </NavLink> 
-          <NavLink to='/Details'> 
-            Detail 
+          <NavLink to='/detail-student'> 
+            Detail student 
+          </NavLink> 
+          <NavLink to='/detail-teacher'> 
+            Detail Teacher
           </NavLink> 
         </NavMenu> 
       </Nav> 

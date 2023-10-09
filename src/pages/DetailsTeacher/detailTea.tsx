@@ -1,6 +1,6 @@
 import React from 'react'; 
   
-const Detail = () => { 
+const DetailTeacher = () => { 
   return ( 
     <div 
       style={{ 
@@ -17,4 +17,4 @@ const Detail = () => {
   ); 
 }; 
   
-export default Detail;
+export default DetailTeacher;
