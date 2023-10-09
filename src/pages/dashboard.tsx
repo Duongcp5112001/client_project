@@ -7,7 +7,6 @@ const DashBoard = () => {
         display: 'flex', 
         justifyContent: 'Center', 
         alignItems: 'Right', 
-        height: '100vh',
         width: '80%',
         marginLeft: '20%'
       }} 
