@@ -2,6 +2,7 @@
 import React from 'react';
 import "./styles.css"
 import Logo from '../../assets/logo.png'
+import NavDropdown from '../NavDropdown/Dropdown';
 
 const Navbar: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const Navbar: React.FC = () => {
         <a href="/"><img src={Logo} alt="Image"/></a>
       </div>
       <div className='navDropdown'>
-
+        <NavDropdown />
       </div>
     </div>
   );

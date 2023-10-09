@@ -1,3 +1,18 @@
 .img {
     height: 100%;
 }
+
+.navbar {
+    height: 130px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid black;
+}
+
+.navDropdown {
+    margin-right: 50px;
+}
+
+.navLogo {
+    margin-left: 50px;
+}

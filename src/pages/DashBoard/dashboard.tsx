@@ -1,21 +1,20 @@
 import React from 'react'; 
   
-const Login = () => { 
+const DashBoard = () => { 
   return ( 
     <div 
       style={{ 
         display: 'flex', 
         justifyContent: 'Center', 
         alignItems: 'Right', 
-        width: '80%',
-        marginLeft: '20%'
+        width: '78.6%',
+        marginLeft: '21.3%',
+        paddingTop: '50px'
       }} 
     > 
-      <h1>Login</h1> 
+      <h1>Dashboard</h1> 
     </div> 
   ); 
 }; 
-
-
   
-export default Login;
+export default DashBoard;

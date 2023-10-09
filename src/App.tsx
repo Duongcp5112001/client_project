@@ -6,11 +6,11 @@ import {
 } from "react-router-dom";
 import SideBar from './components/SideBar'; 
 import NavBar from './components/NavBar';
-import DashBoard from './components/DashBoard/dashboard';
-import ListStudent from './components/ListStudent/listStudents';
-import ListTeacher from './components/ListTeacher/listTeachers';
-import Login from './components/Login/login';
-import Detail from './components/Details/detail';
+import DashBoard from './pages/DashBoard/dashboard';
+import ListStudent from './pages/ListStudent/listStudents';
+import ListTeacher from './pages/ListTeacher/listTeachers';
+import Login from './pages/Login/login';
+import Detail from './pages/DetailsStudent/detailStu';
 
 function App() { 
   const Layout = () => {

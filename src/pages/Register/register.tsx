@@ -1,6 +1,6 @@
 import React from 'react'; 
   
-const ListTeacher = () => { 
+const Register = () => { 
   return ( 
     <div 
       style={{ 
@@ -8,12 +8,13 @@ const ListTeacher = () => {
         justifyContent: 'Center', 
         alignItems: 'Right', 
         width: '80%',
-        marginLeft: '20%'
+        marginLeft: '20%',
+        margin: '0 auto',
       }} 
     > 
-      <h1>List Teachers</h1> 
+      <h1>Register</h1> 
     </div> 
   ); 
 }; 
-  
-export default ListTeacher;
+
+export default Register;

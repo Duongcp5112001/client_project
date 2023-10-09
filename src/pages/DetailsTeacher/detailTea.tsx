@@ -7,11 +7,12 @@ const Detail = () => {
         display: 'flex', 
         justifyContent: 'Center', 
         alignItems: 'Right', 
-        width: '80%',
-        marginLeft: '20%'
+        width: '78.6%',
+        marginLeft: '21.3%',
+        paddingTop: '50px'
       }} 
     > 
-      <h1>Information details</h1> 
+      <h1>Information details for teacher</h1> 
     </div> 
   ); 
 }; 
