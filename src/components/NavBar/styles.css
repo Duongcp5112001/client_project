@@ -6,7 +6,8 @@
     height: 130px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border: 1px solid black;
+    border-bottom: 1px solid #cccccc53;
+    background-color: #4287f5;
 }
 
 .navDropdown {
@@ -14,5 +15,10 @@
 }
 
 .navLogo {
-    margin-left: 50px;
+    margin-left: 100px;
+}
+
+.custom-logo {
+    width: 100px;
+    height: 100%;
 }

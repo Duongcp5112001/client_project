@@ -20,7 +20,7 @@ export const NavLink = styled(Link)`
   text-align: center;
   font-size: 20px;
   height: 100px;
-  vertical-align: middle;
+  border-bottom: 1px solid #ccc;
 `; 
   
 export const Bars = styled(FaBars)` 
