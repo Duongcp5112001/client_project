@@ -1,9 +1,10 @@
-import React from 'react'; 
 import { FunctionComponent } from "react";
+import { Navigate } from "react-router-dom";
 import "./style.css";
 import Subtract from "../../assets/login/subtract.svg"
 import Frame from "../../assets/login/frame.svg"
 import Frame1 from "../../assets/login/frame1.svg"
+import Rectangle from "../../assets/login/rectangle-4@2x.png"
   
 const Login: FunctionComponent = () => { 
   return ( 
@@ -11,14 +12,14 @@ const Login: FunctionComponent = () => {
       <img
         className="minimalism-login-page-child"
         alt=""
-        src="/rectangle-4@2x.png"
+        src={Rectangle}
       />
       <div className="welcome-parent">
         <b className="welcome">Welcome</b>
       </div>
       <div className="login-with-others-parent">
         <div className="login-with-others-container">
-          <a>Forgot password?</a>
+          <div>Forgot password?</div>
         </div>
         <img className="subtract-icon" alt="" src={Subtract} />
       </div>
