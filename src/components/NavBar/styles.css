@@ -8,6 +8,11 @@
     grid-template-columns: repeat(2, 1fr);
     border-bottom: 1px solid #cccccc53;
     background-color: #4287f5;
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99999999;
 }
 
 .navDropdown {

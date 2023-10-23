@@ -1,4 +1,4 @@
-export const dataAdmin = [
+const dataAdmin = [
     {
         id: 'a1',
         avatar: 'https://www.immiwork.com/assets/images/default-avatar.svg',
@@ -20,3 +20,5 @@ export const dataAdmin = [
         gender: 'Female'
     }
 ]
+
+export default dataAdmin
