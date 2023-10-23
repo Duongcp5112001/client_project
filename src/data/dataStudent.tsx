@@ -76,7 +76,7 @@ const dataStudent = [
         first_name: 'Nguyen Le Bao',
         last_name: 'Ngoc',
         birth: '08/01/2001',
-        gender: 'female',
+        gender: 'Female',
         major: 'Graphic Design'
     },
     {

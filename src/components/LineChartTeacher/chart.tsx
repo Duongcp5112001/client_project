@@ -1,12 +1,12 @@
 import React from 'react';
 import { Line } from '@ant-design/plots';
-import dataStudentChart from '../../data/dataStudentChart'
+import dataTeacherChart from '../../data/dataTeacherChart'
 
-const StudentLine = () => {
+const TeacherLine = () => {
     const config = {
-        data: dataStudentChart,
+        data: dataTeacherChart,
         xField: 'date',
-        yField: 'Student_number',
+        yField: 'Teacher_number',
         label: {},
         point: {
           size: 5,
@@ -40,4 +40,4 @@ const StudentLine = () => {
     );
 };
 
-export default StudentLine
+export default TeacherLine
