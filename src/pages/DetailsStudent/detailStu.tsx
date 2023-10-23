@@ -2,7 +2,6 @@ import React from 'react';
   
 const DetailStudent = () => { 
   return ( 
-<<<<<<< HEAD
     <div 
       style={{ 
         display: 'flex', 
@@ -17,11 +16,6 @@ const DetailStudent = () => {
         Detail Student
       </h1>
     </div> 
-=======
-    <div>
-      
-    </div>
->>>>>>> 7c3ff6ddc19a804adf9ed47f60a67551bd649465
   ); 
 }; 
   
