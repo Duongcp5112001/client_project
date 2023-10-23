@@ -7,7 +7,7 @@ import {
 import SideBar from './components/SideBar'; 
 import NavBar from './components/NavBar';
 import DashBoard from './pages/DashBoard/dashboard';
-import ListStudent from './pages/ListStudent/listStudents';
+import ListStudent from './pages/ListStudent/ListStudents';
 import ListTeacher from './pages/ListTeacher/listTeachers';
 import Login from './pages/Login/login';
 import DetailStudent from './pages/DetailsStudent/detailStu';
