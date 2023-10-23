@@ -10,7 +10,7 @@ export const Nav = styled.nav`
     position: fixed;
     height: 100%;
     overflow: auto;
-    margin-top: 130px;
+    margin-top: 130px !important;
 `; 
   
 export const NavLink = styled(Link)` 

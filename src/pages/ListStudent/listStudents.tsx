@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
-import Data from '../../data/dataStudent'
+import data from '../../data/dataStudent'
+import { Link } from 'react-router-dom';
 
 interface DataType {
   id: string;
@@ -14,58 +15,56 @@ interface DataType {
   major: string;
 }
 
+const ListStudents = () => {
+  const [dataSource, setDataSource] = useState(data)
+  const columns: ColumnsType<DataType> = [
+    {
+      title: 'First Name',
+      dataIndex: 'first_name',
+      key: 'first_name',
+    },
+    {
+      title: 'Last Name',
+      dataIndex: 'last_name',
+      key: 'last_name',
+    },
+    {
+      title: 'Email',
+      dataIndex: 'email',
+      key: 'email',
+    },
+    {
+      title: 'Gender',
+      dataIndex: 'gender',
+      key: 'gender',
+    },
+    {
+      title: 'Major',
+      dataIndex: 'major',
+      key: 'major',
+    },
+    {
+      title: 'Action',
+      key: 'action',
+      render: (_, data) => (
+        <Space size="middle">
+          <Link style={{ color: 'green' }} to={''}>Detail</Link> |
+          <Link style={{ color: 'red' }} onClick={() => deleteStudent(data.id)} to={''}>Delete</Link>
+        </Space>
+      ),
+    },
+  ];
+  
+  const deleteStudent = (id: string) => {
+    const updatedData = dataSource.filter((item: any) => item.id !== id);
+    setDataSource(updatedData);
+  }
 
-const columns: ColumnsType<DataType> = [
-  {
-    title: 'First Name',
-    dataIndex: 'first_name',
-    key: 'first_name',
-  },
-  {
-    title: 'Last Name',
-    dataIndex: 'last_name',
-    key: 'last_name',
-  },
-  {
-    title: 'Email',
-    dataIndex: 'email',
-    key: 'email',
-  },
-  {
-    title: 'Gender',
-    dataIndex: 'gender',
-    key: 'gender',
-  },
-  {
-    title: 'Major',
-    dataIndex: 'major',
-    key: 'major',
-  },
-  {
-    title: 'Action',
-    key: 'action',
-    render: (_, data) => (
-      <Space size="middle">
-        <a style={{color:'green'}}>Detail</a> |
-        <button style={{color:'red'}} onClick={() => deleteStudent(data.id)}>Delete</button>
-      </Space>
-    ),
-  },
-];
-
-const data: DataType[] = Data
-
-const deleteStudent = (a: string) => {
-  const deleteStudentData = data.findIndex((value) => value.id === a);
-  if (deleteStudentData) return data.splice(deleteStudentData, 1);
-}
-
-const listStudents = () => {
   return (
-   <div style={{width:'80%',float:'right',   marginLeft:'300px',marginTop:'40px'}}>
-    <Table  columns={columns} dataSource={data} />
+   <div style={{width:'80%',float:'right',   marginLeft:'300px',marginTop:'130px'}}>
+    <Table  columns={columns} dataSource={dataSource} />
     </div> 
   )
 }
 
-export default listStudents
+export default ListStudents

@@ -7,6 +7,16 @@
     margin-bottom: 30px;
 }
 
+.custom-dashboard {
+    display: 'flex';
+    justify-content: 'Center'; 
+    align-items: 'Right'; 
+    width: '78.6%';
+    float: 'right';
+    padding-top: '50px';
+    margin-top: '150px' !important;
+}
+
 h4 {
     text-align: center;
 }
