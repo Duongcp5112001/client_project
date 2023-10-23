@@ -1,5 +1,6 @@
 import React from 'react'; 
-  
+import Data from '../../data/dataStudent';
+
 const DetailStudent = () => { 
   return ( 
     <div 
@@ -12,7 +13,16 @@ const DetailStudent = () => {
         paddingTop: '50px'
       }} 
     > 
-      <h1>Information details for student</h1> 
+     <div>
+      <h2>Student Details</h2>
+      <p>ID: {id}</p>
+      <img src={avatar} alt="Avatar" />
+      <p>First Name: {first_name}</p>
+      <p>Last Name: {last_ame}</p>
+      <p>Birth: {birth}</p>
+      <p>Gender: {gender}</p>
+      <p>Major: {major}</p>
+    </div> 
     </div> 
   ); 
 }; 
