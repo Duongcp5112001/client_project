@@ -1,4 +1,4 @@
-export const dataStudent = [
+const dataStudent = [
     {
         id: 's1',
         avatar: 'https://www.immiwork.com/assets/images/default-avatar.svg',
@@ -100,3 +100,5 @@ export const dataStudent = [
         major: 'Graphic Design'
     }
 ]
+
+export default dataStudent
