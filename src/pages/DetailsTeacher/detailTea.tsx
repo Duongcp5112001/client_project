@@ -13,7 +13,7 @@ const DetailTeacher = () => {
       }} 
     > 
       <h1 className="text-3xl font-bold underline">
-        Hello world!
+        Detail Teacher
       </h1>
     </div> 
   ); 

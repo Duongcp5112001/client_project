@@ -29,7 +29,6 @@ function App() {
       </div>
     )
   }
-  // ádasd
   
   const router = createBrowserRouter([
     {

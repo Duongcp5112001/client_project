@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import Data from '../../data/dataStudent'
@@ -13,6 +13,7 @@ interface DataType {
   gender: string;
   major: string;
 }
+
 
 const columns: ColumnsType<DataType> = [
   {
@@ -43,17 +44,21 @@ const columns: ColumnsType<DataType> = [
   {
     title: 'Action',
     key: 'action',
-    render: (_, record) => (
+    render: (_, data) => (
       <Space size="middle">
-        <a style={{color:'green'}}>Edit</a> |
-        <a style={{color:'red'}}>Delete</a>
+        <a style={{color:'green'}}>Detail</a> |
+        <button style={{color:'red'}} onClick={() => deleteStudent(data.id)}>Delete</button>
       </Space>
     ),
   },
 ];
 
-const data: DataType[] = Data;
-  
+const data: DataType[] = Data
+
+const deleteStudent = (a: string) => {
+  const deleteStudentData = data.findIndex((value) => value.id === a);
+  if (deleteStudentData) return data.splice(deleteStudentData, 1);
+}
 
 const listStudents = () => {
   return (
