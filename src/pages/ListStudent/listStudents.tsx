@@ -46,7 +46,7 @@ const ListStudents = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (_, dataSource) => (
+      render: (_: any, dataSource: DataType) => (
         <Space size="middle">
           <Link style={{ color: 'green', textDecoration: 'none'  }} to={''}>Detail</Link> |
           <Link style={{ color: 'red', textDecoration: 'none' }} onClick={() => deleteStudent(dataSource.id)} to={''}>Delete</Link>
