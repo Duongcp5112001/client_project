@@ -1,28 +1,3 @@
-import React from 'react'; 
-<<<<<<< Updated upstream:src/components/Login/login.tsx
-  
-const Login = () => { 
-  return ( 
-    <div 
-      style={{ 
-        display: 'flex', 
-        justifyContent: 'Center', 
-        alignItems: 'Right', 
-        width: '80%',
-        marginLeft: '20%'
-      }} 
-    > 
-      <h1>Login</h1> 
-    </div> 
-  ); 
-}; 
-
-
-  
-export default Login;
-=======
-import './style.css'
-
 function Login() {
   return (
     <>
@@ -95,8 +70,5 @@ function Login() {
     </>
   )
 }
-
-
   
 export default Login;
->>>>>>> Stashed changes:src/pages/Login/login.tsx
