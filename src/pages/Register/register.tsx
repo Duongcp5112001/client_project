@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-import {
-  Form,
-  Input,
-} from 'antd';
 
 interface AppState {
   register: string;
@@ -21,9 +17,37 @@ class App extends Component<{}, AppState> {
   };
 
   handleRegister = () => {
-    const username = (document.getElementById('username') as HTMLInputElement).value;
-    alert(`Registration successful for ${username}`);
-    this.setState({ register: 'hide' }); // Hiding the registration form after successful registration
+    const email = (document.getElementById('floatingInput') as HTMLInputElement).value;
+    const password = (document.getElementById('floatingPassword') as HTMLInputElement).value;
+    const confirmPassword = (document.getElementById('confirmPassword') as HTMLInputElement).value;
+
+    // Kiểm tra nếu bất kỳ trường nào không được điền
+    if (!email || !password || !confirmPassword) {
+      alert('Vui lòng điền đầy đủ thông tin');
+      return;
+    }
+
+    // Kiểm tra định dạng email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Vui lòng nhập địa chỉ email hợp lệ');
+      return;
+    }
+
+    // Kiểm tra mật khẩu (tối thiểu 6 ký tự)
+    if (password.length < 6) {
+      alert('Mật khẩu phải chứa ít nhất 6 ký tự');
+      return;
+    }
+
+    // Xác nhận mật khẩu
+    if (password !== confirmPassword) {
+      alert('Mật khẩu không trùng khớp. Vui lòng thử lại.');
+      return;
+    }
+
+    alert(`Đăng ký thành công`);
+    this.setState({ register: 'hide' }); // Ẩn biểu mẫu đăng ký sau khi đăng ký thành công
   };
 
   render() {
@@ -46,39 +70,14 @@ class App extends Component<{}, AppState> {
                       <div className="form-floating mb-3">
                         <input className="form-control" id="floatingInput" type="email" placeholder="name@example.com" required />
                         <label htmlFor="floatingInput">Email address</label>
-                          <Form.Item
-                              rules={[
-                                {
-                                  type: 'email',
-                                  message: 'The input is not valid E-mail!',
-                                },
-                                  {
-                                    required: true,
-                                    message: 'Please input your E-mail!',
-                                  },
-                                ]}
-                              >
-                              </Form.Item>
                       </div>
                       <div className="form-floating mb-3">
                         <input className="form-control" id="floatingPassword" type="password" placeholder="Password" required />
                         <label htmlFor="floatingPassword">Password</label>
-                          <Form.Item
-                              rules={[
-                                {
-                                  required: true,
-                                  message: 'Please input your password!',
-                                },
-                              ]}
-                              hasFeedback
-                            >
-                            </Form.Item>
                       </div>
-                      <div className="form-check mb-3">
-                        <input className="form-check-input" type="checkbox" name="agree" id="agree" />
-                        <label className="form-check-label" htmlFor="agree">
-                          I agree with the <a href="#">Terms & Conditions</a>.
-                        </label>
+                      <div className="form-floating mb-3">
+                        <input className="form-control" id="confirmPassword" type="password" placeholder="Confirm Password" required />
+                        <label htmlFor="confirmPassword">Confirm Password</label>
                       </div>
                       <div className="form-group">
                         <button className="btn btn-primary" id="register" type="button" name="registerSubmit" onClick={this.handleRegister}>
@@ -102,8 +101,7 @@ class App extends Component<{}, AppState> {
                   alt=""
                   style={{ transform: "rotate(10deg)" }}
                 />
-                <h1 className="mb-4">
-                </h1>
+                <h1 className="mb-4"></h1>
                 <p className="lead text-muted">
                   Welcome to the world of endless possibilities and opportunities
                 </p>
