@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap");
 .card-header:first-child {
   border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
@@ -58,3 +59,8 @@ a {
     text-decoration: underline!important;
     cursor: pointer;
   }
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> Stashed changes
