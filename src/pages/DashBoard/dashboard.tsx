@@ -14,7 +14,7 @@ const DashBoard = () => {
         alignItems: 'Right', 
         width: '78.6%',
         float: 'right',
-        paddingTop: '50px',
+        paddingTop: '200px',
       }} 
     > 
       <div className='chart'>
