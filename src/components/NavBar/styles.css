@@ -1,3 +1,29 @@
+.img {
+    height: 100%;
+}
+
 .navbar {
-    background-color: green;
+    height: 130px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid #cccccc53;
+    background-color: #4287f5;
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99999999;
+}
+
+.navDropdown {
+    margin-right: 50px;
+}
+
+.navLogo {
+    margin-left: 100px;
+}
+
+.custom-logo {
+    width: 100px;
+    height: 100%;
 }

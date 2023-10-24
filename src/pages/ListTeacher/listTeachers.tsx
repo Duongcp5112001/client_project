@@ -1,19 +1,20 @@
 import React from 'react'; 
   
-const DashBoard = () => { 
+const ListTeacher = () => { 
   return ( 
     <div 
       style={{ 
         display: 'flex', 
         justifyContent: 'Center', 
         alignItems: 'Right', 
-        width: '80%',
-        marginLeft: '20%'
+        width: '78.6%',
+        marginLeft: '21.3%',
+        paddingTop: '50px'
       }} 
     > 
-      <h1>Dashboard</h1> 
+      <h1>List Teachers</h1> 
     </div> 
   ); 
 }; 
   
-export default DashBoard;
+export default ListTeacher;
