@@ -7,7 +7,16 @@ import './style.css'
   
 const DashBoard = () => { 
   return ( 
-    <div className='custom-dashboard'> 
+    <div
+      style={{ 
+        display: 'flex', 
+        justifyContent: 'Center', 
+        alignItems: 'Right', 
+        width: '78.6%',
+        float: 'right',
+        paddingTop: '50px',
+      }} 
+    > 
       <div className='chart'>
         <div>
           <h4>Số lượng sinh viên theo học từng chuyên ngành</h4>
