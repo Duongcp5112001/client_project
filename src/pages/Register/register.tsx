@@ -23,7 +23,7 @@ class App extends Component<{}, AppState> {
   handleRegister = () => {
     const username = (document.getElementById('username') as HTMLInputElement).value;
     alert(`Registration successful for ${username}`);
-    this.setState({ register: 'hide' }); // Hiding the registration form after successful registration
+    this.setState({ register: 'hide' });
   };
 
   render() {
@@ -47,32 +47,32 @@ class App extends Component<{}, AppState> {
                         <input className="form-control" id="floatingInput" type="email" placeholder="name@example.com" required />
                         <label htmlFor="floatingInput">Email address</label>
                           <Form.Item
-                              rules={[
+                            rules={[
+                              {
+                                type: 'email',
+                                message: 'The input is not valid E-mail!',
+                              },
                                 {
-                                  type: 'email',
-                                  message: 'The input is not valid E-mail!',
+                                  required: true,
+                                  message: 'Please input your E-mail!',
                                 },
-                                  {
-                                    required: true,
-                                    message: 'Please input your E-mail!',
-                                  },
-                                ]}
-                              >
-                              </Form.Item>
+                              ]}
+                            >
+                          </Form.Item>
                       </div>
                       <div className="form-floating mb-3">
                         <input className="form-control" id="floatingPassword" type="password" placeholder="Password" required />
                         <label htmlFor="floatingPassword">Password</label>
                           <Form.Item
-                              rules={[
-                                {
-                                  required: true,
-                                  message: 'Please input your password!',
-                                },
-                              ]}
-                              hasFeedback
-                            >
-                            </Form.Item>
+                            rules={[
+                              {
+                                required: true,
+                                message: 'Please input your password!',
+                              },
+                            ]}
+                            hasFeedback
+                          >
+                          </Form.Item>
                       </div>
                       <div className="form-check mb-3">
                         <input className="form-check-input" type="checkbox" name="agree" id="agree" />
