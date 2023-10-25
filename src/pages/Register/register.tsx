@@ -17,37 +17,32 @@ class App extends Component<{}, AppState> {
   };
 
   handleRegister = () => {
+    const username = (document.getElementById('username') as HTMLInputElement).value;
     const email = (document.getElementById('floatingInput') as HTMLInputElement).value;
     const password = (document.getElementById('floatingPassword') as HTMLInputElement).value;
     const confirmPassword = (document.getElementById('confirmPassword') as HTMLInputElement).value;
 
-    // Kiểm tra nếu bất kỳ trường nào không được điền
-    if (!email || !password || !confirmPassword) {
-      alert('Vui lòng điền đầy đủ thông tin');
-      return;
-    }
-
-    // Kiểm tra định dạng email
+    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert('Vui lòng nhập địa chỉ email hợp lệ');
+      alert('Please enter a valid email address');
       return;
     }
 
-    // Kiểm tra mật khẩu (tối thiểu 6 ký tự)
+    // Password validation (minimum 6 characters)
     if (password.length < 6) {
-      alert('Mật khẩu phải chứa ít nhất 6 ký tự');
+      alert('Password must be at least 6 characters long');
       return;
     }
 
-    // Xác nhận mật khẩu
+    // Password confirmation
     if (password !== confirmPassword) {
-      alert('Mật khẩu không trùng khớp. Vui lòng thử lại.');
+      alert('Passwords do not match. Please try again.');
       return;
     }
 
-    alert(`Đăng ký thành công`);
-    this.setState({ register: 'hide' }); // Ẩn biểu mẫu đăng ký sau khi đăng ký thành công
+    alert(`Registration successful for ${username}`);
+    this.setState({ register: 'hide' }); // Hiding the registration form after successful registration
   };
 
   render() {
