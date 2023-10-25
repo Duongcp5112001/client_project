@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-import {
-  Form,
-  Input,
-} from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 interface AppState {
   register: string;
@@ -21,9 +18,32 @@ class App extends Component<{}, AppState> {
   };
 
   handleRegister = () => {
-    const username = (document.getElementById('username') as HTMLInputElement).value;
+    
+    const username = (document.getElementById('username') as HTMLInputElement)?.value;
+    const email = (document.getElementById('floatingInput') as HTMLInputElement)?.value;
+    const password = (document.getElementById('floatingPassword') as HTMLInputElement)?.value;
+    const confirmPassword = (document.getElementById('confirmPassword') as HTMLInputElement)?.value;
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
+    // Password validation (minimum 6 characters)
+    if (password.length < 6) {
+      alert('Password must be at least 6 characters long');
+      return;
+    }
+
+    // Password confirmation
+    if (password !== confirmPassword) {
+      alert('Passwords do not match. Please try again.');
+      return;
+    }
+
     alert(`Registration successful for ${username}`);
-    this.setState({ register: 'hide' });
   };
 
   render() {
@@ -46,39 +66,14 @@ class App extends Component<{}, AppState> {
                       <div className="form-floating mb-3">
                         <input className="form-control" id="floatingInput" type="email" placeholder="name@example.com" required />
                         <label htmlFor="floatingInput">Email address</label>
-                          <Form.Item
-                            rules={[
-                              {
-                                type: 'email',
-                                message: 'The input is not valid E-mail!',
-                              },
-                                {
-                                  required: true,
-                                  message: 'Please input your E-mail!',
-                                },
-                              ]}
-                            >
-                          </Form.Item>
                       </div>
                       <div className="form-floating mb-3">
                         <input className="form-control" id="floatingPassword" type="password" placeholder="Password" required />
                         <label htmlFor="floatingPassword">Password</label>
-                          <Form.Item
-                            rules={[
-                              {
-                                required: true,
-                                message: 'Please input your password!',
-                              },
-                            ]}
-                            hasFeedback
-                          >
-                          </Form.Item>
                       </div>
-                      <div className="form-check mb-3">
-                        <input className="form-check-input" type="checkbox" name="agree" id="agree" />
-                        <label className="form-check-label" htmlFor="agree">
-                          I agree with the <a href="#">Terms & Conditions</a>.
-                        </label>
+                      <div className="form-floating mb-3">
+                        <input className="form-control" id="confirmPassword" type="password" placeholder="Confirm Password" required />
+                        <label htmlFor="confirmPassword">Confirm Password</label>
                       </div>
                       <div className="form-group">
                         <button className="btn btn-primary" id="register" type="button" name="registerSubmit" onClick={this.handleRegister}>
@@ -102,8 +97,7 @@ class App extends Component<{}, AppState> {
                   alt=""
                   style={{ transform: "rotate(10deg)" }}
                 />
-                <h1 className="mb-4">
-                </h1>
+                <h1 className="mb-4"></h1>
                 <p className="lead text-muted">
                   Welcome to the world of endless possibilities and opportunities
                 </p>
