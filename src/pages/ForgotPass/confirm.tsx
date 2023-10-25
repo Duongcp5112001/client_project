@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
 interface AppState {
-  forgetPassword: string;
+  confirmMail: string;
 }
   
 class NewPass extends Component<{}, AppState> {
   constructor(props: {}) {
     super(props);
-    this.state = { forgetPassword: 'show col-lg-6 px-lg-4' };
+    this.state = { confirmMail: 'show col-lg-6 px-lg-4' };
   }
 
   render() {
@@ -18,26 +18,20 @@ class NewPass extends Component<{}, AppState> {
         <div className="page-holder align-items-center py-4 bg-gray-100 vh-100">
           <div className="container">
             <div className="row align-items-center">
-              <div className={this.state.forgetPassword}>
+              <div className={this.state.confirmMail}>
                 <div className="card">
                   <div className="card-body p-lg-5">
                     <h3 className="mb-4">Reset your Password</h3>
                     <form action="index.html">
                       <div className="form-floating mb-3">
-                        <input className="form-control" id="floatingInput" type="password" placeholder="New Password" required />
-                        <label htmlFor="floatingInput">New Password</label>
+                        <input className="form-control" id="floatingPassword" type="email" placeholder="Email" required />
+                        <label htmlFor="floatingPassword">Enter your Email</label>
                         <div className="valid-feedback">Valid.</div>
                         <div className="invalid-feedback">Please fill out this field.</div>
+                        <button className="btn btn-primary" id="login" type="button" name="loginSubmit" >
+                          Send Request
+                        </button>
                       </div>
-                      <div className="form-floating mb-3">
-                        <input className="form-control" id="floatingPassword" type="password" placeholder="Confirm Password" required />
-                        <label htmlFor="floatingPassword">Confirm Password</label>
-                        <div className="valid-feedback">Valid.</div>
-                        <div className="invalid-feedback">Please fill out this field.</div>
-                      </div>
-                      <button className="btn btn-primary" id="login" type="button" name="loginSubmit" >
-                          Reset Password
-                      </button>
                     </form>
                   </div>
                   <div className="card-footer px-lg-5 py-lg-4">

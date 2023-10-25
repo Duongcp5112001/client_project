@@ -39,7 +39,7 @@ class Login extends Component<{}, AppState> {
                         <div className="valid-feedback">Valid.</div>
                         <div className="invalid-feedback">Please fill out this field.</div>
                       </div>
-                        <a href="#">Forget Password</a>
+                        <a href="#">Forgot Password</a>
                       <div className="form-group">
                         <button className="btn btn-primary" id="login" type="button" name="loginSubmit" >
                           Login
@@ -49,7 +49,7 @@ class Login extends Component<{}, AppState> {
                   </div>
                   <div className="card-footer px-lg-5 py-lg-4">
                     <div className="text-sm text-muted">
-                      First time ? <a>Register</a>.
+                      <a>Register now</a>.
                     </div>
                   </div>
                 </div>

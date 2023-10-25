@@ -44,6 +44,7 @@
   }
   .text-sm {
     font-size: .7875rem !important;
+    text-align: center;
   }
   h3, .h3 {
     font-size: 1.575rem;
@@ -59,6 +60,16 @@
       align-items: right;
     }
 
-    #login.btn.btn-primary {
-        margin-top: 10px;
-    }
+  #login.btn.btn-primary {
+      margin-top: 15px;
+      width: 6rem;
+  }
+
+  .container{
+    margin: 12% 10% 15% 10%;
+  }
+
+  .mb-4{
+    font-size: 3rem;
+    text-align: center;
+  }
